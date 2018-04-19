@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import logo from './DUShield.png'
+import logo from './assets/DUShield.png'
 import './App.css'
 import GoogleMapsApiWrapper from './components/GoogleMapsApiWrapper.jsx'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 const api_Url =
   'https://crimsonandgoldtrail.herokuapp.com/api/alpha/businesses'
@@ -25,9 +26,11 @@ class App extends Component {
         <img src={logo} className='App-logo' alt='logo' />
         <h1 className='App-title'>Crimson and Gold Trail Project</h1>
       </header>
+      <Router>
       <main>
         <GoogleMapsApiWrapper businesses={this.state.businesses}/>
       </main>
+      </Router>
     </div>
   }
 }
