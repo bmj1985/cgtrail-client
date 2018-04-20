@@ -1,30 +1,58 @@
 .App {
   text-align: center;
   font-family: 'Nunito', sans-serif;
+  background-color: #802c34;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 8% 80% 8%;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 
 .App-logo {
-  height: 80px;
+  height: 8vh;
+  align-self: center;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  height: 6vh;
+  padding: 1vh;
+  margin: 1vh;
   color: white;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  box-shadow: 0 8px 140px 0px rgba(0,0,0,0.1);
+  grid-area: header;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2rem;
+  margin: 1vw;
+  align-self: center;
 }
 
 .App-intro {
   font-size: large;
 }
+.App-main {
+   grid-area: main;
+}
 
-.Google-Map {
-  height: 80vh;
-  width: 100vw;
+.App-footer {
+  grid-area: footer;
+  display: flex;
+  height: 6vh;
+  padding: 1vh;
+  margin: 1vh;
+  justify-content: flex-end;
+}
+.poweredByDU {
+align-self: flex-end;
+height: 6vh;
 }
 
 @keyframes App-logo-spin {

@@ -3,6 +3,9 @@ import logo from './assets/DUShield.png'
 import './App.css'
 import GoogleMapsApiWrapper from './components/GoogleMapsApiWrapper.jsx'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import Home from './views/Home.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 const api_Url =
   'https://crimsonandgoldtrail.herokuapp.com/api/alpha/businesses'
@@ -22,15 +25,13 @@ class App extends Component {
 
   render() {
     return <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <h1 className='App-title'>Crimson and Gold Trail Project</h1>
-      </header>
+      <Header />
       <Router>
-      <main>
-        <GoogleMapsApiWrapper businesses={this.state.businesses}/>
-      </main>
+        <main className="App-main">
+        <Home businesses={this.state.businesses} ></Home>
+        </main>
       </Router>
+      <Footer />
     </div>
   }
 }
