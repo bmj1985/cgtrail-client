@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  font-family: 'Futura PT', sans-serif;
-  background-color: #F7F7F7;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 8% 80% 8%;
+  font-family: 'Futura PT', sans-serif !important;
+  background-color: #F7F7F7 !important;
+  display: grid !important;
+  grid-template-columns: 20% 20% 20% 20% 20% !important;
+  grid-template-rows: 8% 80% 8% !important;
   grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
+    "header header header header header"
+    "main main main main main"
+    "footer footer footer footer footer";
 }
 
 .App-logo {
@@ -16,45 +16,42 @@
   align-self: center;
 }
 
-.App-header {
-   background-color: #222122;
-  display: flex;
+/* .App-header {
+   background-color: #222122 !important;
+  display: flex ;
   justify-content: flex-start;
-  height: 8vh;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  height: 8vh !important;
+  grid-row-start: 1 !important;
+  grid-row-end: 1 !important;
   box-shadow: 0 8px 140px 0px rgba(0,0,0,0.1);
-  grid-area: header;
-}
+  grid-area: header !important;
+} */
 
-.App-title {
+/* .App-title {
   margin-left: 2vw;
   color: #F7F7F7;
   font-size: 1.6rem;
   margin: 1vw;
   align-self: center;
-}
+} */
 
-.App-intro {
+/* .App-intro {
   font-size: large;
-}
+} */
 .App-main {
    grid-area: main;
 }
 
 .App-footer {
-  background-color: #222122;
-  grid-area: footer;
+  background-color: #222122 !important;
+  grid-area: footer !important;
   display: flex;
-  height: 8vh;
-  /* padding: 1vh;
-  margin: 1vh; */
-  justify-content: flex-end;
 }
-.poweredByDU {
+
+/* .poweredByDU {
 align-self: flex-end;
 height: 6vh;
-}
+} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

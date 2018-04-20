@@ -3,7 +3,10 @@ import logo from './assets/DUShield.png'
 import './App.css'
 import GoogleMapsApiWrapper from './components/GoogleMapsApiWrapper.jsx'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MyAwesomeReactComponent from './components/MyAwesomeReactComponent.jsx'
 import Home from './views/Home.jsx'
+import Header2 from './components/Header2.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -25,15 +28,16 @@ class App extends Component {
 
   render() {
     return <div className='App'>
-      <Header />
-      <Router>
-        <main className="App-main">
-        <Home businesses={this.state.businesses} ></Home>
-        </main>
-      </Router>
-      <Footer />
-    </div>
+        <MuiThemeProvider>
+          <Header2 className='App-header' />
+          <main className='App-main'>
+            <Home businesses={this.state.businesses} />
+          </main>
+          <Footer />
+        </MuiThemeProvider>
+      </div>
   }
 }
 
 export default App
+
