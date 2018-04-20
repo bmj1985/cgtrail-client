@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  font-family: 'Nunito', sans-serif;
-  background-color: #802c34;
+  font-family: 'Futura PT', sans-serif;
+  background-color: #F7F7F7;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 8% 80% 8%;
@@ -12,17 +12,15 @@
 }
 
 .App-logo {
-  height: 8vh;
+  height: 6vh;
   align-self: center;
 }
 
 .App-header {
+   background-color: #222122;
   display: flex;
   justify-content: flex-start;
-  height: 6vh;
-  padding: 1vh;
-  margin: 1vh;
-  color: white;
+  height: 8vh;
   grid-row-start: 1;
   grid-row-end: 1;
   box-shadow: 0 8px 140px 0px rgba(0,0,0,0.1);
@@ -30,7 +28,9 @@
 }
 
 .App-title {
-  font-size: 2rem;
+  margin-left: 2vw;
+  color: #F7F7F7;
+  font-size: 1.6rem;
   margin: 1vw;
   align-self: center;
 }
@@ -43,11 +43,12 @@
 }
 
 .App-footer {
+  background-color: #222122;
   grid-area: footer;
   display: flex;
-  height: 6vh;
-  padding: 1vh;
-  margin: 1vh;
+  height: 8vh;
+  /* padding: 1vh;
+  margin: 1vh; */
   justify-content: flex-end;
 }
 .poweredByDU {

@@ -1,7 +1,7 @@
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react'
 import React, {Component} from 'react'
 import config from '../config'
-import images from '../assets/images'
+import icon from '../assets/images'
 import { relative } from 'path';
 
 export class MapContainer extends Component {
@@ -9,7 +9,7 @@ export class MapContainer extends Component {
     return <Map className="Google-Map" businesses={this.props.businesses} google={this.props.google} zoom={11} initialCenter={{ lat: 39.706524, lng: -105.01 }} containerStyle={{ position: 'relative', width: '100vw', height: '80vh' }}>
         {this.props.businesses.map(business => {
           return business.Location.map(location => {
-            return <Marker position={{ lat: location.Coordinates[0], lng: location.Coordinates[1] }} icon={images.Imgur_Icon} />;
+            return <Marker position={{ lat: location.Coordinates[0], lng: location.Coordinates[1] }} icon={icon.Imgur_Icon} />;
           });
         })}
       </Map>;
